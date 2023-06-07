@@ -1,0 +1,170 @@
+:root {
+  --stone-950: #0c0a09;
+  --stone-900: #1c1917;
+  --stone-600: #44403c;
+  --stone-500: #78716c;
+
+  /* Emerald */
+  --emerald-050: #ecfdf5;
+  --emerald-100: #d1fae5;
+  --emerald-200: #a7f3d0;
+  --emerald-300: #6ee7b7;
+  --emerald-400: #34d399;
+  --emerald-500: #10b981;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+
+  --accent-one: var(--emerald-500);
+  --accent-two: var(var(--emerald-600));
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
+
+/* || RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* || GENERAL STYLING */
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--stone-900);
+  color: var(--emerald-050);
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+/* || UTILS */
+.wrapper {
+  padding: 0 1.5rem;
+  max-width: 700px;
+  margin-inline: auto;
+  /* background-color: rgb(3, 61, 61); */
+}
+
+/* || HEADER */
+
+.header {
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  background-color: var(--stone-950);
+  color: var(--accent-one);
+  padding: 3rem 0;
+}
+
+/* || MAIN */
+
+.main {
+  padding: 3rem 0;
+}
+
+.main__title {
+  font-size: 2rem;
+}
+
+.main__subtitle {
+  font-size: 1.5rem;
+}
+
+/* || SCORE */
+.score__container {
+  /* background-color: #059669; */
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 2rem;
+}
+
+.score__sign {
+  font-size: 5rem;
+}
+
+.score__result {
+  font-size: 2rem;
+}
+
+/* || BUTTONS */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.btn {
+  background-color: var(--stone-600);
+  color: var(--emerald-400);
+  /* padding: 1rem; */
+  border-radius: 12px;
+  border: none;
+  font-size: 4rem;
+  min-width: 130px;
+  min-height: 130px;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--stone-500);
+}
+
+/* || FOOTER */
+
+.footer__icon {
+  color: var(--emerald-600);
+  font-size: 1.6rem;
+}
+
+/* || BREAKPOINTS */
+@media (max-width: 840px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .main__title {
+    font-size: 1.6rem;
+  }
+  .main__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    gap: 16px;
+  }
+
+  .btn {
+    font-size: 2.5rem;
+    min-width: 100px;
+    min-height: 100px;
+  }
+
+  .score__sign {
+    font-size: 3.5rem;
+  }
+
+  .score__result {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 580px) {
+}
