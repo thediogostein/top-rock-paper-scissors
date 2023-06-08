@@ -34,11 +34,15 @@
         <div class="score__container">
           <div class="score__col">
             <div class="score__sign" id="user-hand">?</div>
-            <p class="score__result">Player: 0</p>
+            <p class="score__result">
+              Player: <span id="player-score">0</span>
+            </p>
           </div>
           <div class="score__col">
             <div class="score__sign" id="computer-hand">?</div>
-            <p class="score__result">Player: 0</p>
+            <p class="score__result">
+              Computer: <span id="computer-score">0</span>
+            </p>
           </div>
         </div>
 
@@ -66,5 +70,13 @@
         ></a>
       </p>
     </footer>
+
+    <dialog>
+      <p id="dialog-result" class="dialog-result"></p>
+      <button class="dialog-btn-play-again" id="btn-play-again">
+        Play again
+      </button>
+      <button class="dialog-btn-no" id="btn-no-thanks">No thanks</button>
+    </dialog>
   </body>
 </html>

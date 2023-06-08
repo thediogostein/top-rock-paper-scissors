@@ -60,6 +60,12 @@ h1 {
   font-size: 2.8rem;
 }
 
+button {
+  display: inline-block;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 /* || UTILS */
 .wrapper {
   padding: 0 1.5rem;
@@ -125,7 +131,6 @@ h1 {
   font-size: 4rem;
   min-width: 130px;
   min-height: 130px;
-  cursor: pointer;
 }
 
 .btn:hover,
@@ -138,6 +143,54 @@ h1 {
 .footer__icon {
   color: var(--emerald-600);
   font-size: 1.6rem;
+}
+
+/* || DIALOG */
+dialog {
+  /* display: flex; */
+  flex-direction: column;
+  gap: 12px;
+  padding: 2rem;
+  background-color: var(--stone-500);
+  border: none;
+  text-align: center;
+  color: white;
+}
+
+dialog::backdrop {
+  background-color: hsl(20, 14%, 4%, 0.7);
+}
+
+.dialog-result {
+  font-size: 2.5rem;
+}
+
+dialog button {
+  padding: 1rem 2rem;
+  border: none;
+  color: inherit;
+}
+
+.dialog-btn-play-again {
+  background-color: var(--emerald-700);
+  font-size: 1.5rem;
+  display: block;
+}
+
+.dialog-btn-play-again:hover,
+.dialog-btn-play-again:focus {
+  background-color: var(--emerald-600);
+}
+
+.dialog-btn-no {
+  background: none;
+  text-decoration: underline;
+  color: var(--emerald-050);
+}
+
+.dialog-btn-no:hover,
+.dialog-btn-no:focus {
+  color: var(--emerald-200);
 }
 
 /* || BREAKPOINTS */
