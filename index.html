@@ -26,29 +26,29 @@
     </header>
     <main class="main">
       <div class="wrapper">
-        <h2 class="main__title">Choose your weapon</h2>
+        <h2 class="main__title" id="fight-result-title">Choose your weapon</h2>
         <p class="main__subtitle">First to score 5 points wins the game</p>
 
         <div class="score__container">
           <div class="score__col">
-            <div class="score__sign">?</div>
+            <div class="score__sign" id="user-hand">?</div>
             <p class="score__result">Player: 0</p>
           </div>
           <div class="score__col">
-            <div class="score__sign">?</div>
+            <div class="score__sign" id="computer-hand">?</div>
             <p class="score__result">Player: 0</p>
           </div>
         </div>
 
-        <div class="buttons">
-          <button class="btn">
+        <div class="buttons" id="buttonsContainer">
+          <button class="btn" id="rock-btn" data-hand="rock">
+            <i class="fa-regular fa-hand-back-fist"></i>
+          </button>
+          <button class="btn" id="paper-btn" data-hand="paper">
             <i class="fa-regular fa-hand"></i>
           </button>
-          <button class="btn">
+          <button class="btn" id="scissors-btn" data-hand="scissors">
             <i class="fa-regular fa-hand-scissors"></i>
-          </button>
-          <button class="btn">
-            <i class="fa-regular fa-hand-back-fist"></i>
           </button>
         </div>
       </div>

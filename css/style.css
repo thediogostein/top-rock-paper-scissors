@@ -36,6 +36,12 @@ body {
   padding: 0;
 }
 
+/* This code fix the even delegation issue when clicking on the icon inside the button */
+/* https://css-tricks.com/slightly-careful-sub-elements-clickable-things/ */
+button > * {
+  pointer-events: none;
+}
+
 /* || GENERAL STYLING */
 
 body {
@@ -114,7 +120,6 @@ h1 {
 .btn {
   background-color: var(--stone-600);
   color: var(--emerald-400);
-  /* padding: 1rem; */
   border-radius: 12px;
   border: none;
   font-size: 4rem;
