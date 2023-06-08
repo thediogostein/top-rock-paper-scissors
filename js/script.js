@@ -1,5 +1,6 @@
-function addToDOM(result, playerHand, computerHand) {
+function addToDOM(result, resultExplanation, playerHand, computerHand) {
   const fightResultTitleEl = document.getElementById('fight-result-title');
+  const fightResultSubtitle = document.getElementById('fight-result-subtitle');
   const userHandEl = document.getElementById('user-hand');
   const computerHandEl = document.getElementById('computer-hand');
   let playerHandHTML;
@@ -11,6 +12,7 @@ function addToDOM(result, playerHand, computerHand) {
   console.log(result, playerHand, computerHand);
 
   fightResultTitleEl.innerText = result;
+  fightResultSubtitle.innerText = resultExplanation;
 
   if (playerHand === 'rock') {
     playerHandHTML = rockHTML;
@@ -51,6 +53,7 @@ function playRound(e) {
     const playerHand = e.target.dataset.hand;
 
     let result;
+    let resultExplanation;
 
     // comparar os dois valores
 
@@ -62,18 +65,26 @@ function playRound(e) {
       (playerHand === 'scissors' && computerHand === 'scissors')
     ) {
       result = `It's a tie!`;
-
-      addToDOM(result, playerHand, computerHand);
+      resultExplanation = `${
+        playerHand[0].toUpperCase() + playerHand.substring(1)
+      } ties with ${computerHand}`;
+      addToDOM(result, resultExplanation, playerHand, computerHand);
     } else if (
       (playerHand === 'rock' && computerHand === 'scissors') ||
       (playerHand === 'paper' && computerHand === 'rock') ||
       (playerHand === 'scissors' && computerHand === 'paper')
     ) {
       result = `Player wins!`;
-      addToDOM(result, playerHand, computerHand);
+      resultExplanation = `${
+        playerHand[0].toUpperCase() + playerHand.substring(1)
+      } beats ${computerHand}`;
+      addToDOM(result, resultExplanation, playerHand, computerHand);
     } else {
       result = `Computer wins!`;
-      addToDOM(result, playerHand, computerHand);
+      resultExplanation = `${
+        computerHand[0].toUpperCase() + computerHand.substring(1)
+      } beats ${playerHand}`;
+      addToDOM(result, resultExplanation, playerHand, computerHand);
     }
   }
 }
